@@ -2,6 +2,7 @@
 
 import { useRef, useEffect } from 'react';
 import Link from 'next/link';
+import SearchBar from './SearchBar';
 import styles from './Navigation.module.css';
 
 export default function Navigation() {
@@ -56,6 +57,7 @@ export default function Navigation() {
           <li><Link href="/group-coaching">Group Coaching</Link></li>
           <li><Link href="/more">More</Link></li>
         </ul>
+        <SearchBar />
       </div>
     </nav>
   );

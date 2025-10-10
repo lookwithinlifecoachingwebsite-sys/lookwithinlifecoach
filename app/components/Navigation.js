@@ -9,6 +9,8 @@ export default function Navigation() {
   const navRef = useRef(null);
   const glowRef = useRef(null);
   const [isMoreOpen, setIsMoreOpen] = useState(false);
+  const [showNav, setShowNav] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const moreRef = useRef(null);
 
   useEffect(() => {
@@ -61,13 +63,39 @@ export default function Navigation() {
     };
   }, [isMoreOpen]);
 
+  // Scroll behavior for navbar
+  useEffect(() => {
+    const controlNavbar = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY < 100) {
+        // At the top of the page - show navbar
+        setShowNav(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down and past threshold - hide navbar
+        setShowNav(false);
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling up - show navbar
+        setShowNav(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', controlNavbar);
+
+    return () => {
+      window.removeEventListener('scroll', controlNavbar);
+    };
+  }, [lastScrollY]);
+
   const toggleMore = (e) => {
     e.preventDefault();
     setIsMoreOpen(!isMoreOpen);
   };
 
   return (
-    <nav className={styles.navbar} ref={navRef}>
+    <nav className={`${styles.navbar} ${showNav ? styles.navVisible : styles.navHidden}`} ref={navRef}>
       <div className={styles.glow} ref={glowRef}></div>
       <div className={styles.container}>
         <div className={styles.logo}>

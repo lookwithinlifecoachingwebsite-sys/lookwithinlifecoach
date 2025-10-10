@@ -95,7 +95,7 @@ export default function Testimonials() {
                     </svg>
                   </div>
                   <p className={styles.testimonialText}>
-                    "{testimonial.text}"
+                    &quot;{testimonial.text}&quot;
                   </p>
                   <div className={styles.testimonialAuthor}>
                     <h4 className={styles.authorName}>{testimonial.name}</h4>

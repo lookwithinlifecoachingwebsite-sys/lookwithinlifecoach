@@ -1,10 +1,17 @@
 # Production build (main branch)
+# Note: Auto-publishing is disabled for production
+# Deploy manually from Netlify dashboard
 [build]
   command = "npm run build"
   publish = ".next"
+  ignore = "exit 0"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+[context.production]
+  # Manual deploys only for production
+  autoPublish = false
 
 # QA Environment (qa branch)
 [context.qa]

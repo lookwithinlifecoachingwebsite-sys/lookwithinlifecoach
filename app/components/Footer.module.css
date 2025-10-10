@@ -79,7 +79,7 @@
 .socialIcons a {
   width: 40px;
   height: 40px;
-  background-color: #fff;
+  background-color: #faedcd;
   color: #1a1a1a;
   border-radius: 50%;
   display: flex;
@@ -89,7 +89,7 @@
 }
 
 .socialIcons a:hover {
-  background-color: #e0e0e0;
+  background-color: #fdf4dc;
   transform: scale(1.1);
 }
 

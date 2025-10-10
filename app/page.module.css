@@ -4,6 +4,12 @@
 }
 
 /* Hero Section */
+.heroWrapper {
+  background-color: #faedcd;
+  min-height: 100vh;
+  width: 100%;
+}
+
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -263,6 +269,10 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .heroWrapper {
+    min-height: auto;
+  }
+
   .hero {
     grid-template-columns: 1fr;
     gap: 2rem;

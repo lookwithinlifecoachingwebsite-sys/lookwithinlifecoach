@@ -8,27 +8,29 @@ export default function Home() {
   return (
     <div className={styles.page}>
       {/* Hero Section */}
-      <section className={styles.hero}>
-        <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>
-            Transform your life through personalized coaching
-          </h1>
-          <p className={styles.heroDescription}>
-            At Look Within, we combine proven coaching methodologies with personalized approaches.
-            We can help you achieve your goals and thrive, as our programs are designed for everyone
-            seeking positive change in their life.
-          </p>
-          <button className={styles.ctaButton}>
-            Book a consultation
-          </button>
-        </div>
-        <div className={styles.heroImage}>
-          <Image
-            src={MainImage}
-            alt="Life Coach"
-            className={styles.mainImage}
-            priority
-          />
+      <section className={styles.heroWrapper}>
+        <div className={styles.hero}>
+          <div className={styles.heroContent}>
+            <h1 className={styles.heroTitle}>
+              Transform your life through personalized coaching
+            </h1>
+            <p className={styles.heroDescription}>
+              At Look Within, we combine proven coaching methodologies with personalized approaches.
+              We can help you achieve your goals and thrive, as our programs are designed for everyone
+              seeking positive change in their life.
+            </p>
+            <button className={styles.ctaButton}>
+              Book a consultation
+            </button>
+          </div>
+          <div className={styles.heroImage}>
+            <Image
+              src={MainImage}
+              alt="Life Coach"
+              className={styles.mainImage}
+              priority
+            />
+          </div>
         </div>
       </section>
 

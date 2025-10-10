@@ -40,7 +40,7 @@ export default function Home() {
         <div className={styles.ratingContainer}>
           <div className={styles.ratingItem}>
             <StarRating />
-            <p className={styles.ratingText}>500+ Success Stories</p>
+            <p className={styles.ratingText}>Success Rate</p>
           </div>
           <div className={styles.ratingDivider}></div>
           <div className={styles.ratingItem}>

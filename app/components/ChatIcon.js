@@ -1,16 +1,22 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import styles from './ChatIcon.module.css';
 
 export default function ChatIcon() {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [isSending, setIsSending] = useState(false);
+  const [showForm, setShowForm] = useState(true);
   const chatRef = useRef(null);
 
-  // Replace with your WhatsApp number (include country code, no + or spaces)
-  // Example: for +1 234-567-8900, use: 12345678900
-  const whatsappNumber = '15615425658'; // REPLACE THIS WITH YOUR ACTUAL NUMBER
+  // EmailJS configuration
+  const SERVICE_ID = 'service_95bo1rb';
+  const TEMPLATE_ID = 'template_4v9in6i';
+  const PUBLIC_KEY = 'XVUAsuYn0r4PMrFXf';
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -32,20 +38,44 @@ export default function ChatIcon() {
     setIsOpen(!isOpen);
   };
 
-  const handleSendMessage = () => {
-    if (message.trim()) {
-      // Encode the message for URL
-      const encodedMessage = encodeURIComponent(message);
-      // Open WhatsApp with the message
-      window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
-      // Clear the message and close chat
-      setMessage('');
-      setIsOpen(false);
+  const handleSendMessage = async () => {
+    if (message.trim() && name.trim() && email.trim()) {
+      setIsSending(true);
+
+      try {
+        // Send email using EmailJS
+        await emailjs.send(
+          SERVICE_ID,
+          TEMPLATE_ID,
+          {
+            name: name,
+            email: email,
+            message: message,
+          },
+          PUBLIC_KEY
+        );
+
+        // Success - show confirmation and close
+        alert('Message sent successfully! We\'ll get back to you soon.');
+        setMessage('');
+        setName('');
+        setEmail('');
+        setIsOpen(false);
+        setShowForm(true);
+      } catch (error) {
+        console.error('Failed to send message:', error);
+        alert('Failed to send message. Please try again.');
+      } finally {
+        setIsSending(false);
+      }
+    } else {
+      alert('Please fill in all fields');
     }
   };
 
   const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
       handleSendMessage();
     }
   };
@@ -70,18 +100,38 @@ export default function ChatIcon() {
               <p>Hi there! 👋</p>
               <p>How can we help you today?</p>
             </div>
+            <div className={styles.formContainer}>
+              <input
+                type="text"
+                placeholder="Your name"
+                className={styles.formInput}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+              <input
+                type="email"
+                placeholder="Your email"
+                className={styles.formInput}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <textarea
+                placeholder="Type your message..."
+                className={styles.messageInput}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                onKeyPress={handleKeyPress}
+                rows="4"
+              />
+            </div>
           </div>
           <div className={styles.chatFooter}>
-            <input
-              type="text"
-              placeholder="Type your message..."
-              className={styles.chatInput}
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              onKeyPress={handleKeyPress}
-            />
-            <button className={styles.sendButton} onClick={handleSendMessage}>
-              Send
+            <button
+              className={styles.sendButton}
+              onClick={handleSendMessage}
+              disabled={isSending}
+            >
+              {isSending ? 'Sending...' : 'Send Message'}
             </button>
           </div>
         </div>

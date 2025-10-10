@@ -1,6 +1,7 @@
 import { Asap } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 const asap = Asap({
   weight: ['400', '500', '600'],
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
       <body className={asap.className}>
         <Navigation />
         {children}
+        <Footer />
       </body>
     </html>
   );

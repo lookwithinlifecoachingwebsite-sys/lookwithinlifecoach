@@ -1,0 +1,38 @@
+.starContainer {
+  display: flex;
+  gap: 0.5rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+.star {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+  transition: filter 0.3s ease;
+}
+
+.star.animate {
+  animation: starGrow 0.8s ease-in-out forwards;
+}
+
+.star.gold {
+  color: #ffc107;
+  filter: drop-shadow(0 2px 4px rgba(255, 193, 7, 0.3));
+}
+
+.star.grey {
+  color: #e0e0e0;
+}
+
+@keyframes starGrow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

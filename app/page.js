@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Testimonials from "./components/Testimonials";
+import StarRating from "./components/StarRating";
+import MainImage from "./Main Image.png";
 
 export default function Home() {
   return (
@@ -21,10 +23,12 @@ export default function Home() {
           </button>
         </div>
         <div className={styles.heroImage}>
-          <div className={styles.imagePlaceholder}>
-            {/* Placeholder for hero image */}
-            <span>Hero Image</span>
-          </div>
+          <Image
+            src={MainImage}
+            alt="Life Coach"
+            className={styles.mainImage}
+            priority
+          />
         </div>
       </section>
 
@@ -32,9 +36,7 @@ export default function Home() {
       <section className={styles.rating}>
         <div className={styles.ratingContainer}>
           <div className={styles.ratingItem}>
-            <div className={styles.ratingStars}>
-              {'★'.repeat(5)}
-            </div>
+            <StarRating />
             <p className={styles.ratingText}>500+ Success Stories</p>
           </div>
           <div className={styles.ratingDivider}></div>

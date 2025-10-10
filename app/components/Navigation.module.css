@@ -12,9 +12,9 @@
 .glow {
   position: absolute;
   bottom: 0;
-  width: 200px;
+  width: 250px;
   height: 2px;
-  background: linear-gradient(to right, transparent 0%, #ffffff 20%, #ffffff 80%, transparent 100%);
+  background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.3) 15%, #ffffff 35%, #ffffff 65%, rgba(255, 255, 255, 0.3) 85%, transparent 100%);
   pointer-events: none;
   transform: translateX(-50%);
   opacity: 0;

@@ -19,7 +19,7 @@
 .logo a {
   color: #fff;
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -44,6 +44,7 @@
   color: #fff;
   text-decoration: none;
   font-size: 1rem;
+  font-weight: 700;
   transition: color 0.3s ease;
   padding: 0.5rem 0;
   position: relative;

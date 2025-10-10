@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Testimonials from "./components/Testimonials";
 import StarRating from "./components/StarRating";
-import MainImage from "./Main Image.png";
+import MainImage from "./Main Image 2.png";
 
 export default function Home() {
   return (

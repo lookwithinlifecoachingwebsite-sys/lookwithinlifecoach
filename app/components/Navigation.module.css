@@ -11,16 +11,15 @@
 
 .glow {
   position: absolute;
-  bottom: -80px;
+  bottom: 0;
   width: 200px;
-  height: 150px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.15) 30%, transparent 70%);
+  height: 4px;
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 40%, transparent 80%);
   pointer-events: none;
   transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.3s ease;
-  filter: blur(30px);
+  filter: blur(8px);
   z-index: 1;
 }
 

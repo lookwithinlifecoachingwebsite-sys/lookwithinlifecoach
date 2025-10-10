@@ -17,10 +17,9 @@ export default function Navigation() {
 
       const rect = nav.getBoundingClientRect();
       const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
 
+      // Only follow horizontal position, keep glow at bottom
       glow.style.left = `${x}px`;
-      glow.style.top = `${y}px`;
       glow.style.opacity = '1';
     };
 

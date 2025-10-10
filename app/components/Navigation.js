@@ -1,9 +1,51 @@
+'use client';
+
+import { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './Navigation.module.css';
 
 export default function Navigation() {
+  const navRef = useRef(null);
+  const glowRef = useRef(null);
+
+  useEffect(() => {
+    const nav = navRef.current;
+    const glow = glowRef.current;
+
+    const handleMouseMove = (e) => {
+      if (!nav || !glow) return;
+
+      const rect = nav.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      glow.style.left = `${x}px`;
+      glow.style.top = `${y}px`;
+      glow.style.opacity = '1';
+    };
+
+    const handleMouseLeave = () => {
+      if (glow) {
+        glow.style.opacity = '0';
+      }
+    };
+
+    if (nav) {
+      nav.addEventListener('mousemove', handleMouseMove);
+      nav.addEventListener('mouseleave', handleMouseLeave);
+    }
+
+    return () => {
+      if (nav) {
+        nav.removeEventListener('mousemove', handleMouseMove);
+        nav.removeEventListener('mouseleave', handleMouseLeave);
+      }
+    };
+  }, []);
+
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.navbar} ref={navRef}>
+      <div className={styles.glow} ref={glowRef}></div>
       <div className={styles.container}>
         <div className={styles.logo}>
           <Link href="/">Look Within</Link>

@@ -1,6 +1,29 @@
+# Production build (main branch)
 [build]
   command = "npm run build"
   publish = ".next"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# QA Environment (qa branch)
+[context.qa]
+  command = "npm run build"
+
+[context.qa.environment]
+  NEXT_PUBLIC_ENV = "qa"
+
+# Development Environment (development branch)
+[context.development]
+  command = "npm run build"
+
+[context.development.environment]
+  NEXT_PUBLIC_ENV = "development"
+
+# Branch deploy previews
+[context.branch-deploy]
+  command = "npm run build"
+
+# Deploy previews from pull requests
+[context.deploy-preview]
+  command = "npm run build"

@@ -15,6 +15,7 @@ export default function Home() {
         />
         <h1>Welcome to Look Within Life Coaching</h1>
         <p>Your journey to self-discovery starts here.</p>
+        <p><strong>Development Environment - Testing Deployment Pipeline</strong></p>
         <ol>
           <li>
             Get started by editing <code>app/page.js</code>.

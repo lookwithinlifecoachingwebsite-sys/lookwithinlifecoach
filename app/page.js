@@ -13,6 +13,8 @@ export default function Home() {
           height={38}
           priority
         />
+        <h1>Welcome to Look Within Life Coaching</h1>
+        <p>Your journey to self-discovery starts here.</p>
         <ol>
           <li>
             Get started by editing <code>app/page.js</code>.

@@ -1,10 +1,27 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import styles from './SearchBar.module.css';
 
 export default function SearchBar() {
   const [isExpanded, setIsExpanded] = useState(false);
+  const searchRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (searchRef.current && !searchRef.current.contains(event.target)) {
+        setIsExpanded(false);
+      }
+    };
+
+    if (isExpanded) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isExpanded]);
 
   const handleToggle = () => {
     setIsExpanded(!isExpanded);
@@ -18,7 +35,7 @@ export default function SearchBar() {
   };
 
   return (
-    <div className={styles.searchContainer}>
+    <div className={styles.searchContainer} ref={searchRef}>
       <form onSubmit={handleSubmit} className={styles.searchForm}>
         <input
           type="text"

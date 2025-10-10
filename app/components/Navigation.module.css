@@ -13,14 +13,15 @@
   position: absolute;
   bottom: 0;
   width: 250px;
-  height: 6px;
-  background: radial-gradient(ellipse, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.4) 60%, transparent 90%);
+  height: 3px;
+  background: radial-gradient(ellipse, #ffffff 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.6) 50%, transparent 80%);
   pointer-events: none;
   transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.3s ease;
-  filter: blur(6px);
+  filter: blur(4px);
   z-index: 1;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
 }
 
 .container {

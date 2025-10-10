@@ -46,16 +46,6 @@ export default function Home() {
             <div className={styles.ratingNumber}>4.9/5</div>
             <p className={styles.ratingText}>Average Rating</p>
           </div>
-          <div className={styles.ratingDivider}></div>
-          <div className={styles.ratingItem}>
-            <div className={styles.ratingNumber}>95%</div>
-            <p className={styles.ratingText}>Client Satisfaction</p>
-          </div>
-          <div className={styles.ratingDivider}></div>
-          <div className={styles.ratingItem}>
-            <div className={styles.ratingNumber}>10+</div>
-            <p className={styles.ratingText}>Years of Experience</p>
-          </div>
         </div>
       </section>
 

@@ -1,11 +1,11 @@
-import { Montserrat } from "next/font/google";
+import { Asap } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
 
-const montserrat = Montserrat({
-  weight: ['400', '700'],
+const asap = Asap({
+  weight: ['400', '500', '600'],
   subsets: ["latin"],
-  variable: "--font-montserrat",
+  variable: "--font-asap",
 });
 
 export const metadata = {
@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
+      <body className={asap.className}>
         <Navigation />
         {children}
       </body>

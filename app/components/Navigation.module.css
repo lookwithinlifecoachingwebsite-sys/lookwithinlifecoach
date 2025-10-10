@@ -12,16 +12,16 @@
 .glow {
   position: absolute;
   bottom: 0;
-  width: 250px;
-  height: 3px;
-  background: radial-gradient(ellipse, #ffffff 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.6) 50%, transparent 80%);
+  width: 200px;
+  height: 2px;
+  background: radial-gradient(ellipse, #ffffff 0%, #ffffff 20%, rgba(255, 255, 255, 0.8) 40%, rgba(255, 255, 255, 0.3) 60%, transparent 100%);
   pointer-events: none;
   transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.3s ease;
-  filter: blur(4px);
+  filter: blur(1px);
   z-index: 1;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .container {

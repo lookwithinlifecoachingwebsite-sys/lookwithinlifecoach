@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Testimonials from "./components/Testimonials";
 import StarRating from "./components/StarRating";
+import ChatIcon from "./components/ChatIcon";
 import MainImage from "./Main Image 2.png";
 
 export default function Home() {
@@ -125,6 +126,9 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <Testimonials />
+
+      {/* Chat Icon */}
+      <ChatIcon />
     </div>
   );
 }

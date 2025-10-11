@@ -84,6 +84,9 @@ export default function Footer() {
           <h3 className={styles.footerHeading}>CONTACT</h3>
           <div className={styles.contactInfo}>
             <p>Call <a href="tel:866-280-4175" className={styles.phoneLink}>866-280-4175</a> to schedule an appointment with Shelia Malcolm</p>
+            <a href="https://calendly.com/lookwithinlifecoach" target="_blank" rel="noopener noreferrer" className={styles.scheduleButton}>
+              Schedule an Appointment
+            </a>
           </div>
         </div>
       </div>

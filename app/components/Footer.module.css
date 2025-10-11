@@ -90,6 +90,26 @@
   color: #fdf4dc;
 }
 
+.scheduleButton {
+  display: inline-block;
+  background-color: #faedcd;
+  color: #1a1a1a;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  text-align: center;
+  width: fit-content;
+}
+
+.scheduleButton:hover {
+  background-color: #fdf4dc;
+  transform: scale(1.05);
+}
+
 .footerBottom {
   max-width: 1200px;
   margin: 0 auto;

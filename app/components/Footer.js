@@ -117,7 +117,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.footerMeta}>
-          <p className={styles.copyright}>© 2025 Look Within Life Coaching. All rights reserved.</p>
+          <p className={styles.copyright}>© {new Date().getFullYear()} Look Within Life Coaching. All rights reserved.</p>
           <div className={styles.legalLinks}>
             <a href="#" onClick={(e) => { e.preventDefault(); setModalType('privacy'); }}>Privacy Policy</a>
             <a href="#" onClick={(e) => { e.preventDefault(); setModalType('terms'); }}>Terms of Service</a>

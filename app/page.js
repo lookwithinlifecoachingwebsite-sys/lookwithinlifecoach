@@ -5,6 +5,7 @@ import StarRating from "./components/StarRating";
 import ChatIcon from "./components/ChatIcon";
 import PodcastParticles from "./components/PodcastParticles";
 import MainImage from "./Main Image 2.png";
+import AmazonBadge from "./amazon-best-selling-book-badge-nuytxlltt3m1w8hu-nuytxlltt3m1w8hu.png";
 
 export default function Home() {
   return (
@@ -47,6 +48,17 @@ export default function Home() {
           <div className={styles.ratingItem}>
             <div className={styles.ratingNumber}>4.9/5</div>
             <p className={styles.ratingText}>Average Rating</p>
+          </div>
+          <div className={styles.ratingDivider}></div>
+          <div className={styles.ratingItem}>
+            <Image
+              src={AmazonBadge}
+              alt="Amazon Best Selling Book"
+              className={styles.amazonBadge}
+              width={150}
+              height={150}
+            />
+            <p className={styles.ratingText}>Best Selling Book</p>
           </div>
         </div>
       </section>

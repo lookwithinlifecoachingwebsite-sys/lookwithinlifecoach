@@ -42,7 +42,8 @@
   line-height: 1.6;
   color: #666;
   margin: 0;
-  animation: slideInFromRight 0.6s ease-out;
+  opacity: 0;
+  animation: slideInFromRight 0.6s ease-out 1s forwards;
 }
 
 @keyframes slideInFromRight {
@@ -138,6 +139,13 @@
   width: 1px;
   height: 60px;
   background-color: #e0e0e0;
+}
+
+.amazonBadge {
+  width: auto;
+  height: auto;
+  max-width: 150px;
+  object-fit: contain;
 }
 
 /* Services Section */

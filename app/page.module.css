@@ -29,10 +29,12 @@
 
 .heroTitle {
   font-size: 3rem;
-  font-weight: 600;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 900;
   line-height: 1.2;
   color: var(--foreground);
   margin: 0;
+  letter-spacing: -0.03em;
 }
 
 .heroDescription {

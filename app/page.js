@@ -6,6 +6,8 @@ import ChatIcon from "./components/ChatIcon";
 import PodcastParticles from "./components/PodcastParticles";
 import MainImage from "./Main Image 2.png";
 import AmazonBadge from "./amazon-best-selling-book-badge-nuytxlltt3m1w8hu-nuytxlltt3m1w8hu.png";
+import GroupCoachingImage from "./GroupCoaching.png";
+import IndividualCoachingImage from "./IndividualCoaching.png";
 
 export default function Home() {
   return (
@@ -68,9 +70,13 @@ export default function Home() {
         <div className={styles.servicesContainer}>
           <div className={styles.serviceCard}>
             <div className={`${styles.serviceImageWrapper} ${styles.yellowBg}`}>
-              <div className={styles.serviceImagePlaceholder}>
-                <span>Service 1</span>
-              </div>
+              <Image
+                src={IndividualCoachingImage}
+                alt="Individual Coaching"
+                className={styles.serviceImage}
+                width={200}
+                height={300}
+              />
             </div>
             <h3 className={styles.serviceTitle}>Individual Coaching</h3>
             <p className={styles.serviceDescription}>
@@ -82,9 +88,13 @@ export default function Home() {
 
           <div className={styles.serviceCard}>
             <div className={`${styles.serviceImageWrapper} ${styles.pinkBg}`}>
-              <div className={styles.serviceImagePlaceholder}>
-                <span>Service 2</span>
-              </div>
+              <Image
+                src={GroupCoachingImage}
+                alt="Group Coaching"
+                className={styles.serviceImage}
+                width={200}
+                height={300}
+              />
             </div>
             <h3 className={styles.serviceTitle}>Group Coaching</h3>
             <p className={styles.serviceDescription}>
@@ -103,7 +113,7 @@ export default function Home() {
           <p className={styles.sectionDescription}>
             Discover the transformative ways our coaching can support your journey to success and fulfillment.
           </p>
-          <button className={styles.helpYouButton}>15 Minute Meeting - Free Coaching Session</button>
+          <a href="https://calendly.com/lookwithinlifecoach" target="_blank" rel="noopener noreferrer" className={styles.helpYouButton}>15 Minute Meeting - Free Coaching Session</a>
           <div className={styles.helpYouCards}>
             <div className={styles.helpYouCard}>
               <h3 className={styles.helpYouCardTitle}>I Can Help You</h3>

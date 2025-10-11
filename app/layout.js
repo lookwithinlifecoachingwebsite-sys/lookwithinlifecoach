@@ -107,10 +107,10 @@ export default function RootLayout({ children }) {
       ]
     },
     "sameAs": [
-      "https://linkedin.com/company/lookwithinlifecoaching",
-      "https://youtube.com/@lookwithinlifecoaching",
-      "https://instagram.com/lookwithinlifecoaching",
-      "https://tiktok.com/@lookwithinlifecoaching"
+      "https://www.facebook.com/lookwithinlifecoaching",
+      "https://www.youtube.com/channel/UC8pG8q-aKP9Oxox4zzPx7zg",
+      "https://www.instagram.com/lookwithinu/?hl=en",
+      "https://www.linkedin.com/in/sheliamalcolm/"
     ]
   };
 

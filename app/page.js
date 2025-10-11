@@ -21,9 +21,9 @@ export default function Home() {
               We can help you achieve your goals and thrive, as our programs are designed for everyone
               seeking positive change in their life.
             </p>
-            <button className={styles.ctaButton}>
+            <a href="https://calendly.com/lookwithinlifecoach" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>
               Book a consultation
-            </button>
+            </a>
           </div>
           <div className={styles.heroImage}>
             <Image

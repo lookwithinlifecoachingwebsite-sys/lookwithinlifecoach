@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import Testimonials from "./components/Testimonials";
 import StarRating from "./components/StarRating";
 import ChatIcon from "./components/ChatIcon";
+import PodcastParticles from "./components/PodcastParticles";
 import MainImage from "./Main Image 2.png";
 
 export default function Home() {
@@ -83,42 +84,81 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Help You Section */}
+      <section className={styles.helpYouSection}>
+        <div className={styles.helpYouContainer}>
+          <h2 className={styles.sectionTitle}>How We Can Help You</h2>
+          <p className={styles.sectionDescription}>
+            Discover the transformative ways our coaching can support your journey to success and fulfillment.
+          </p>
+          <button className={styles.helpYouButton}>15 Minute Meeting - Free Coaching Session</button>
+          <div className={styles.helpYouCards}>
+            <div className={styles.helpYouCard}>
+              <h3 className={styles.helpYouCardTitle}>I Can Help You</h3>
+              <ul className={styles.helpYouList}>
+                <li>Develop lasting relationships that align with your core values.</li>
+                <li>Create Boundaries for healthy Whole-Life living.</li>
+                <li>Discover a New meaning for D.I.V.O.R.C.E so you can THRIVE!</li>
+                <li>Develop Self-Confidence, Self-Love, and Resilience from INSIDE.</li>
+                <li>Identify how you are WIRED and use it to grow and build your LEGACY.</li>
+              </ul>
+            </div>
+            <div className={styles.helpYouCard}>
+              <h3 className={styles.helpYouCardTitle}>Bounce Back</h3>
+              <p className={styles.helpYouCardDescription}>
+                Look Within Life Coaching LLC is an organization dedicated to being a growth catalyst to individuals, businesses and non-profit organizations. Our team helps clients to create a culture of excellence that gives everyone in the organization the best opportunity to reach their full potential.
+              </p>
+              <p className={styles.helpYouCardDescription}>
+                Shelia Malcolm is both the Owner and the CEO (Compassionate Empowerment Officer) of Look Within Life Coaching LLC. As a certified John Maxwell Transformational Life Coach, Shelia has inspired millions around the world with her coaching skills.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Additional Coaching Section */}
       <section className={styles.additionalCoaching}>
         <div className={styles.additionalCoachingContainer}>
-          <h2 className={styles.sectionTitle}>Additional Coaching Services</h2>
+          <h2 className={styles.sectionTitle}>Coaching Services</h2>
           <p className={styles.sectionDescription}>
             Explore our comprehensive range of coaching programs designed to support your personal
             and professional growth journey.
           </p>
           <div className={styles.coachingGrid}>
             <div className={styles.coachingItem}>
-              <h3 className={styles.coachingItemTitle}>Career Transition Coaching</h3>
+              <h3 className={styles.coachingItemTitle}>Individual Coaching</h3>
               <p className={styles.coachingItemDescription}>
-                Navigate career changes with confidence and clarity. We help you identify your strengths,
-                explore new opportunities, and create actionable plans for your next chapter.
+              Wherever you are on your life's journey, Look Within Life Coaching is here to be the bridge to your next breakthrough.
+              We empower and equip you with the clarity and confidence that is needed to embody Significance. Shelia Malcolm will customize her approach to help you identify and overcome every obstacles that is hindering your breakthrough.
               </p>
+              <a href="#" className={styles.moreLink}>More</a>
             </div>
             <div className={styles.coachingItem}>
-              <h3 className={styles.coachingItemTitle}>Leadership Development</h3>
+              <h3 className={styles.coachingItemTitle}>Corporate Services</h3>
               <p className={styles.coachingItemDescription}>
-                Enhance your leadership skills and executive presence. Build the capabilities needed
-                to inspire teams and drive organizational success.
+              8 out 10 employees state they feel overwhelmed and overworked. Unfortunately, most Corporate Employee Benefit / Counseling Programs do not offer Life Coaching as part of their services. Employees need help setting boundaries on projects, strategies for home & work balance, encouragement to help rebuild their emotional life after the death of a relationship (divorce/break-up) or some other emotional impact.
+Do you want more from your Employee Assistance Program (EAP) counseling services or any counselor you partner with? Look no further!
               </p>
+              <a href="#" className={styles.moreLink}>More</a>
             </div>
             <div className={styles.coachingItem}>
-              <h3 className={styles.coachingItemTitle}>Work-Life Balance</h3>
+              <h3 className={styles.coachingItemTitle}>Group Coaching</h3>
               <p className={styles.coachingItemDescription}>
-                Create sustainable harmony between your professional ambitions and personal wellbeing.
-                Learn strategies to manage stress and prioritize what matters most.
+              Look Within Life Coaching LLC has developed a series of 90 day group coaching programs that works together to deliver measurable results. Our group session makes Life Coaching services affordable for every budget and it also provides clients with a built in support system.
               </p>
+              <a href="#" className={styles.moreLink}>More</a>
             </div>
-            <div className={styles.coachingItem}>
-              <h3 className={styles.coachingItemTitle}>Personal Growth</h3>
-              <p className={styles.coachingItemDescription}>
-                Unlock your full potential and achieve meaningful personal transformation.
-                Develop self-awareness and build habits that support lasting change.
-              </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Podcast Section */}
+      <section className={styles.podcastSection}>
+        <PodcastParticles />
+        <div className={styles.podcastContainer}>
+          <div className={styles.podcastContent}>
+            <div className={styles.podcastPlaceholder}>
+              <span>Podcast Player/Embed</span>
             </div>
           </div>
         </div>

@@ -34,6 +34,13 @@
   gap: 1.5rem;
 }
 
+.footerColumnWide {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  grid-column: span 2;
+}
+
 .footerHeading {
   font-size: 0.875rem;
   font-weight: 600;
@@ -60,6 +67,27 @@
 
 .footerLinks a:hover {
   color: #fff;
+}
+
+.contactInfo {
+  color: #d1d1d1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.contactInfo p {
+  margin: 0;
+}
+
+.phoneLink {
+  color: #faedcd;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.phoneLink:hover {
+  color: #fdf4dc;
 }
 
 .footerBottom {

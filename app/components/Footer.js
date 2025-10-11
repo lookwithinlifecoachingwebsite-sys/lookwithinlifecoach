@@ -1,13 +1,16 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
+import Modal from './Modal';
+import CookieBanner from './CookieBanner';
 import styles from './Footer.module.css';
 
 export default function Footer() {
   const footerRef = useRef(null);
   const dividerRef = useRef(null);
   const glowRef = useRef(null);
+  const [modalType, setModalType] = useState(null);
 
   useEffect(() => {
     const footer = footerRef.current;
@@ -44,17 +47,22 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className={styles.footer} ref={footerRef}>
-      <div className={styles.footerContent} ref={dividerRef}>
+    <>
+      <CookieBanner onOpenCookiePolicy={() => setModalType('cookies')} />
+      <footer className={styles.footer} ref={footerRef}>
+        <div className={styles.footerContent} ref={dividerRef}>
         <div className={styles.glow} ref={glowRef}></div>
-        {/* Company Section */}
+        {/* Quick Links Section */}
         <div className={styles.footerColumn}>
-          <h3 className={styles.footerHeading}>COMPANY</h3>
+          <h3 className={styles.footerHeading}>QUICK LINKS</h3>
           <ul className={styles.footerLinks}>
-            <li><Link href="/about">Who we are</Link></li>
-            <li><Link href="/locations">Locations</Link></li>
-            <li><Link href="/careers">Careers</Link></li>
-            <li><Link href="/why-look-within">Why Look Within</Link></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/about">About</Link></li>
+            <li><Link href="/individual-coaching">Individual Coaching</Link></li>
+            <li><Link href="/group-coaching">Group Coaching</Link></li>
+            <li><Link href="/resources">Resources</Link></li>
+            <li><Link href="/testimonials">Testimonials</Link></li>
+            <li><Link href="/blog">Blog</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </div>
@@ -71,27 +79,12 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Services Section */}
-        <div className={styles.footerColumn}>
-          <h3 className={styles.footerHeading}>SERVICES</h3>
-          <ul className={styles.footerLinks}>
-            <li><Link href="/coaching-packages">Coaching Packages</Link></li>
-            <li><Link href="/workshops">Workshops</Link></li>
-            <li><Link href="/corporate">Corporate Programs</Link></li>
-            <li><Link href="/assessments">Assessments</Link></li>
-          </ul>
-        </div>
-
-        {/* Resources Section */}
-        <div className={styles.footerColumn}>
-          <h3 className={styles.footerHeading}>RESOURCES</h3>
-          <ul className={styles.footerLinks}>
-            <li><Link href="/resources">All Resources</Link></li>
-            <li><Link href="/blog">Blog</Link></li>
-            <li><Link href="/testimonials">Testimonials</Link></li>
-            <li><Link href="/case-studies">Case Studies</Link></li>
-            <li><Link href="/events">Events</Link></li>
-          </ul>
+        {/* Contact Section */}
+        <div className={styles.footerColumnWide}>
+          <h3 className={styles.footerHeading}>CONTACT</h3>
+          <div className={styles.contactInfo}>
+            <p>Call <a href="tel:866-280-4175" className={styles.phoneLink}>866-280-4175</a> to schedule an appointment with Shelia Malcolm</p>
+          </div>
         </div>
       </div>
 
@@ -123,12 +116,52 @@ export default function Footer() {
         <div className={styles.footerMeta}>
           <p className={styles.copyright}>© 2025 Look Within Life Coaching. All rights reserved.</p>
           <div className={styles.legalLinks}>
-            <Link href="/privacy">Privacy Policy</Link>
-            <Link href="/terms">Terms of Service</Link>
-            <Link href="/cookies">Cookie Policy</Link>
+            <a href="#" onClick={(e) => { e.preventDefault(); setModalType('privacy'); }}>Privacy Policy</a>
+            <a href="#" onClick={(e) => { e.preventDefault(); setModalType('terms'); }}>Terms of Service</a>
+            <a href="#" onClick={(e) => { e.preventDefault(); setModalType('cookies'); }}>Cookie Policy</a>
           </div>
         </div>
       </div>
-    </footer>
+
+      {/* Modals */}
+      <Modal isOpen={modalType === 'privacy'} onClose={() => setModalType(null)} title="Privacy Policy">
+        <h3>Introduction</h3>
+        <p>Look Within Life Coaching LLC ("we," "our," or "us") respects your privacy and is committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data and tell you about your privacy rights.</p>
+
+        <h3>Information</h3>
+        <p>No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
+      </Modal>
+
+      <Modal isOpen={modalType === 'terms'} onClose={() => setModalType(null)} title="Terms of Service">
+        <h3>Introduction</h3>
+        <p>Look Within Life Coaching LLC ("we," "our," or "us") respects your privacy and is committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data and tell you about your privacy rights.</p>
+
+        <h3>Information</h3>
+        <p>No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
+      </Modal>
+
+      <Modal isOpen={modalType === 'cookies'} onClose={() => setModalType(null)} title="Cookie Policy">
+        <h3>What Are Cookies</h3>
+        <p>Cookies are small text files that are placed on your computer or mobile device when you visit our website. They are widely used to make websites work more efficiently and provide information to website owners.</p>
+
+        <h3>How We Use Cookies</h3>
+        <p>We use cookies to:</p>
+        <ul>
+          <li>Remember your preferences and settings</li>
+          <li>Understand how you use our website</li>
+          <li>Improve your experience on our site</li>
+          <li>Enable certain functions and features</li>
+        </ul>
+
+        <h3>Types of Cookies We Use</h3>
+        <p><strong>Essential Cookies:</strong> These cookies are necessary for the website to function properly.</p>
+        <p><strong>Analytics Cookies:</strong> These cookies help us understand how visitors interact with our website.</p>
+        <p><strong>Functionality Cookies:</strong> These cookies enable enhanced functionality and personalization.</p>
+
+        <h3>Managing Cookies</h3>
+        <p>You can control and manage cookies in your browser settings. Please note that removing or blocking cookies may impact your user experience.</p>
+      </Modal>
+      </footer>
+    </>
   );
 }

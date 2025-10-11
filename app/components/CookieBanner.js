@@ -37,7 +37,7 @@ export default function CookieBanner({ onOpenCookiePolicy }) {
         <div className={styles.cookieText}>
           <p>
             We use cookies to enhance your browsing experience, analyze site traffic, and personalize content.
-            By clicking "Accept", you consent to our use of cookies.{' '}
+            By clicking &quot;Accept&quot;, you consent to our use of cookies.{' '}
             <button
               className={styles.learnMoreLink}
               onClick={onOpenCookiePolicy}

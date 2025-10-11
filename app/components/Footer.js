@@ -126,7 +126,7 @@ export default function Footer() {
       {/* Modals */}
       <Modal isOpen={modalType === 'privacy'} onClose={() => setModalType(null)} title="Privacy Policy">
         <h3>Introduction</h3>
-        <p>Look Within Life Coaching LLC ("we," "our," or "us") respects your privacy and is committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data and tell you about your privacy rights.</p>
+        <p>Look Within Life Coaching LLC (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) respects your privacy and is committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data and tell you about your privacy rights.</p>
 
         <h3>Information</h3>
         <p>No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
@@ -134,7 +134,7 @@ export default function Footer() {
 
       <Modal isOpen={modalType === 'terms'} onClose={() => setModalType(null)} title="Terms of Service">
         <h3>Introduction</h3>
-        <p>Look Within Life Coaching LLC ("we," "our," or "us") respects your privacy and is committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data and tell you about your privacy rights.</p>
+        <p>Look Within Life Coaching LLC (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) respects your privacy and is committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data and tell you about your privacy rights.</p>
 
         <h3>Information</h3>
         <p>No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>

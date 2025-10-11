@@ -128,7 +128,7 @@ export default function Home() {
             <div className={styles.coachingItem}>
               <h3 className={styles.coachingItemTitle}>Individual Coaching</h3>
               <p className={styles.coachingItemDescription}>
-              Wherever you are on your life's journey, Look Within Life Coaching is here to be the bridge to your next breakthrough.
+              Wherever you are on your life&apos;s journey, Look Within Life Coaching is here to be the bridge to your next breakthrough.
               We empower and equip you with the clarity and confidence that is needed to embody Significance. Shelia Malcolm will customize her approach to help you identify and overcome every obstacles that is hindering your breakthrough.
               </p>
               <a href="#" className={styles.moreLink}>More</a>

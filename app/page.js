@@ -74,8 +74,9 @@ export default function Home() {
                 src={IndividualCoachingImage}
                 alt="Individual Coaching"
                 className={styles.serviceImage}
-                width={200}
-                height={300}
+                width={600}
+                height={600}
+                quality={100}
               />
             </div>
             <h3 className={styles.serviceTitle}>Individual Coaching</h3>
@@ -92,8 +93,9 @@ export default function Home() {
                 src={GroupCoachingImage}
                 alt="Group Coaching"
                 className={styles.serviceImage}
-                width={200}
-                height={300}
+                width={600}
+                height={600}
+                quality={100}
               />
             </div>
             <h3 className={styles.serviceTitle}>Group Coaching</h3>

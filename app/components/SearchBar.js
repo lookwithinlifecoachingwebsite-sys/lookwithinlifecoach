@@ -62,37 +62,9 @@ export default function SearchBar() {
     setResults([]);
     setSelectedIndex(-1);
 
-    const scrollToElement = (hash) => {
-      const element = document.querySelector(hash);
-      if (element) {
-        // Calculate position to center the element on screen
-        const elementRect = element.getBoundingClientRect();
-        const absoluteElementTop = elementRect.top + window.pageYOffset;
-        const middle = absoluteElementTop - (window.innerHeight / 2) + (elementRect.height / 2);
-
-        window.scrollTo({
-          top: middle,
-          behavior: 'smooth'
-        });
-      }
-    };
-
-    // If we're on the same page, just scroll to the section
-    const currentPath = window.location.pathname;
-    if (currentPath === result.path && result.hash) {
-      scrollToElement(result.hash);
-    } else {
-      // Navigate to the page, and if there's a hash, scroll after navigation
-      if (result.hash) {
-        router.push(`${result.path}${result.hash}`);
-        // Wait for navigation and then scroll
-        setTimeout(() => {
-          scrollToElement(result.hash);
-        }, 500);
-      } else {
-        router.push(result.path);
-      }
-    }
+    // Use native link navigation for consistent behavior with More links
+    const destination = `${result.path}${result.hash}`;
+    window.location.href = destination;
   };
 
   const handleKeyDown = (e) => {

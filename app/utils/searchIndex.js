@@ -3,24 +3,73 @@ export const searchIndex = [
   // Homepage
   {
     title: 'Home',
-    content: 'Transforming Lives Through Personalized Coaching',
+    content: 'Transform your life through personalized coaching proven methodologies personalized approaches achieve goals thrive programs positive change',
     section: 'Hero',
     path: '/',
     hash: ''
   },
   {
-    title: 'Individual Coaching',
-    content: 'One-on-one personalized coaching sessions',
+    title: 'Success Rate & Ratings',
+    content: 'success rate 4.9 5 average rating amazon best selling book bestselling',
+    section: 'Rating',
+    path: '/',
+    hash: ''
+  },
+  {
+    title: 'Individual Coaching Service',
+    content: '1:1 personalized coaching focused unique goals life transitions growth objectives one on one private sessions',
     section: 'Services',
     path: '/',
     hash: '#services'
   },
   {
-    title: 'Group Coaching',
-    content: 'Transform together in supportive group programs',
+    title: 'Group Coaching Service',
+    content: '8 10 weeks group development program specific topics collaborative learning team workshop',
     section: 'Services',
     path: '/',
     hash: '#services'
+  },
+  {
+    title: 'How We Can Help You',
+    content: 'transformative ways coaching support journey success fulfillment free coaching session 15 minute meeting',
+    section: 'Help',
+    path: '/',
+    hash: ''
+  },
+  {
+    title: 'I Can Help You',
+    content: 'develop lasting relationships core values boundaries healthy whole-life living DIVORCE THRIVE self-confidence self-love resilience INSIDE WIRED grow build LEGACY',
+    section: 'Help You Card',
+    path: '/',
+    hash: ''
+  },
+  {
+    title: 'Bounce Back',
+    content: 'growth catalyst individuals businesses non-profit organizations culture excellence full potential Shelia Malcolm Owner CEO Compassionate Empowerment Officer certified John Maxwell Transformational Life Coach inspired millions world coaching skills',
+    section: 'Bounce Back Card',
+    path: '/',
+    hash: ''
+  },
+  {
+    title: 'Coaching Services Overview',
+    content: 'comprehensive range coaching programs personal professional growth journey bridge breakthrough clarity confidence significance obstacles',
+    section: 'Coaching Services',
+    path: '/',
+    hash: ''
+  },
+  {
+    title: 'Podcast',
+    content: 'podcast player embed audio listen episodes show',
+    section: 'Podcast',
+    path: '/',
+    hash: ''
+  },
+  {
+    title: 'Testimonials',
+    content: 'testimonials reviews client stories feedback experiences',
+    section: 'Testimonials',
+    path: '/',
+    hash: ''
   },
 
   // About Page - Specific Cards

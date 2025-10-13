@@ -13,7 +13,7 @@ export const searchIndex = [
     content: 'success rate 4.9 5 average rating amazon best selling book bestselling',
     section: 'Rating',
     path: '/',
-    hash: ''
+    hash: '#ratings'
   },
   {
     title: 'Individual Coaching Service',
@@ -34,42 +34,42 @@ export const searchIndex = [
     content: 'transformative ways coaching support journey success fulfillment free coaching session 15 minute meeting',
     section: 'Help',
     path: '/',
-    hash: ''
+    hash: '#help'
   },
   {
     title: 'I Can Help You',
     content: 'develop lasting relationships core values boundaries healthy whole-life living DIVORCE THRIVE self-confidence self-love resilience INSIDE WIRED grow build LEGACY',
     section: 'Help You Card',
     path: '/',
-    hash: ''
+    hash: '#help-you'
   },
   {
     title: 'Bounce Back',
     content: 'growth catalyst individuals businesses non-profit organizations culture excellence full potential Shelia Malcolm Owner CEO Compassionate Empowerment Officer certified John Maxwell Transformational Life Coach inspired millions world coaching skills',
     section: 'Bounce Back Card',
     path: '/',
-    hash: ''
+    hash: '#bounce-back'
   },
   {
     title: 'Coaching Services Overview',
     content: 'comprehensive range coaching programs personal professional growth journey bridge breakthrough clarity confidence significance obstacles',
     section: 'Coaching Services',
     path: '/',
-    hash: ''
+    hash: '#coaching-services'
   },
   {
     title: 'Podcast',
     content: 'podcast player embed audio listen episodes show',
     section: 'Podcast',
     path: '/',
-    hash: ''
+    hash: '#podcast'
   },
   {
     title: 'Testimonials',
     content: 'testimonials reviews client stories feedback experiences',
     section: 'Testimonials',
     path: '/',
-    hash: ''
+    hash: '#testimonials'
   },
 
   // About Page - Specific Cards

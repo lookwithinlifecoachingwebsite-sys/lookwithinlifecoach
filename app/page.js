@@ -40,7 +40,7 @@ export default function Home() {
       </section>
 
       {/* Rating Section */}
-      <section className={styles.rating}>
+      <section id="ratings" className={styles.rating}>
         <div className={styles.ratingContainer}>
           <div className={styles.ratingItem}>
             <StarRating />
@@ -109,7 +109,7 @@ export default function Home() {
       </section>
 
       {/* Help You Section */}
-      <section className={styles.helpYouSection}>
+      <section id="help" className={styles.helpYouSection}>
         <div className={styles.helpYouContainer}>
           <h2 className={styles.sectionTitle}>How We Can Help You</h2>
           <p className={styles.sectionDescription}>
@@ -117,7 +117,7 @@ export default function Home() {
           </p>
           <a href="https://calendly.com/lookwithinlifecoach" target="_blank" rel="noopener noreferrer" className={styles.helpYouButton}>15 Minute Meeting - Free Coaching Session</a>
           <div className={styles.helpYouCards}>
-            <div className={styles.helpYouCard}>
+            <div id="help-you" className={styles.helpYouCard}>
               <h3 className={styles.helpYouCardTitle}>I Can Help You</h3>
               <ul className={styles.helpYouList}>
                 <li>Develop lasting relationships that align with your core values.</li>
@@ -127,7 +127,7 @@ export default function Home() {
                 <li>Identify how you are WIRED and use it to grow and build your LEGACY.</li>
               </ul>
             </div>
-            <div className={styles.helpYouCard}>
+            <div id="bounce-back" className={styles.helpYouCard}>
               <h3 className={styles.helpYouCardTitle}>Bounce Back</h3>
               <p className={styles.helpYouCardDescription}>
                 Look Within Life Coaching LLC is an organization dedicated to being a growth catalyst to individuals, businesses and non-profit organizations. Our team helps clients to create a culture of excellence that gives everyone in the organization the best opportunity to reach their full potential.
@@ -141,7 +141,7 @@ export default function Home() {
       </section>
 
       {/* Additional Coaching Section */}
-      <section className={styles.additionalCoaching}>
+      <section id="coaching-services" className={styles.additionalCoaching}>
         <div className={styles.additionalCoachingContainer}>
           <h2 className={styles.sectionTitle}>Coaching Services</h2>
           <p className={styles.sectionDescription}>
@@ -177,7 +177,7 @@ Do you want more from your Employee Assistance Program (EAP) counseling services
       </section>
 
       {/* Podcast Section */}
-      <section className={styles.podcastSection}>
+      <section id="podcast" className={styles.podcastSection}>
         <PodcastParticles />
         <div className={styles.podcastContainer}>
           <div className={styles.podcastContent}>
@@ -189,7 +189,9 @@ Do you want more from your Employee Assistance Program (EAP) counseling services
       </section>
 
       {/* Testimonials Section */}
-      <Testimonials />
+      <div id="testimonials">
+        <Testimonials />
+      </div>
 
       {/* Chat Icon */}
       <ChatIcon />

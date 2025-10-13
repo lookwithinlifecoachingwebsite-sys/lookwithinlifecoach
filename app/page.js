@@ -66,7 +66,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className={styles.services}>
+      <section id="services" className={styles.services}>
         <div className={styles.servicesContainer}>
           <div className={styles.serviceCard}>
             <div className={`${styles.serviceImageWrapper} ${styles.yellowBg}`}>
@@ -155,7 +155,7 @@ export default function Home() {
               Wherever you are on your life&apos;s journey, Look Within Life Coaching is here to be the bridge to your next breakthrough.
               We empower and equip you with the clarity and confidence that is needed to embody Significance. Shelia Malcolm will customize her approach to help you identify and overcome every obstacles that is hindering your breakthrough.
               </p>
-              <a href="#" className={styles.moreLink}>More</a>
+              <a href="/individual-coaching#individual-coaching-services" className={styles.moreLink}>More</a>
             </div>
             <div className={styles.coachingItem}>
               <h3 className={styles.coachingItemTitle}>Corporate Services</h3>
@@ -163,14 +163,14 @@ export default function Home() {
               8 out 10 employees state they feel overwhelmed and overworked. Unfortunately, most Corporate Employee Benefit / Counseling Programs do not offer Life Coaching as part of their services. Employees need help setting boundaries on projects, strategies for home & work balance, encouragement to help rebuild their emotional life after the death of a relationship (divorce/break-up) or some other emotional impact.
 Do you want more from your Employee Assistance Program (EAP) counseling services or any counselor you partner with? Look no further!
               </p>
-              <a href="#" className={styles.moreLink}>More</a>
+              <a href="/individual-coaching#corporate-services" className={styles.moreLink}>More</a>
             </div>
             <div className={styles.coachingItem}>
               <h3 className={styles.coachingItemTitle}>Group Coaching</h3>
               <p className={styles.coachingItemDescription}>
               Look Within Life Coaching LLC has developed a series of 90 day group coaching programs that works together to deliver measurable results. Our group session makes Life Coaching services affordable for every budget and it also provides clients with a built in support system.
               </p>
-              <a href="#" className={styles.moreLink}>More</a>
+              <a href="/group-coaching" className={styles.moreLink}>More</a>
             </div>
           </div>
         </div>

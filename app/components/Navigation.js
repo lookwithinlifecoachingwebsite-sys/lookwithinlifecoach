@@ -11,6 +11,7 @@ export default function Navigation() {
   const [isMoreOpen, setIsMoreOpen] = useState(false);
   const [showNav, setShowNav] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const moreRef = useRef(null);
 
   useEffect(() => {
@@ -94,39 +95,62 @@ export default function Navigation() {
     setIsMoreOpen(!isMoreOpen);
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    setIsMoreOpen(false);
+  };
+
   return (
     <nav className={`${styles.navbar} ${showNav ? styles.navVisible : styles.navHidden}`} ref={navRef}>
       <div className={styles.glow} ref={glowRef}></div>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <Link href="/">Look Within</Link>
+          <Link href="/" onClick={closeMobileMenu}>Look Within</Link>
         </div>
-        <ul className={styles.navLinks}>
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/about">About</Link></li>
-          <li><Link href="/individual-coaching">Individual Coaching</Link></li>
-          <li><Link href="/group-coaching">Group Coaching</Link></li>
-          <li className={styles.dropdown} ref={moreRef}>
-            <a href="#" onClick={toggleMore} className={styles.dropdownToggle}>
-              More
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 12 12"
-                fill="currentColor"
-                className={`${styles.dropdownArrow} ${isMoreOpen ? styles.dropdownArrowOpen : ''}`}
-              >
-                <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="2" fill="none"/>
-              </svg>
-            </a>
-            {isMoreOpen && (
-              <ul className={styles.dropdownMenu}>
-                <li><Link href="/speaking-events">Speaking Events</Link></li>
-              </ul>
-            )}
-          </li>
-        </ul>
-        <SearchBar />
+
+        {/* Hamburger Menu Button */}
+        <button
+          className={styles.hamburger}
+          onClick={toggleMobileMenu}
+          aria-label="Toggle menu"
+        >
+          <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.hamburgerLineOpen : ''}`}></span>
+          <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.hamburgerLineOpen : ''}`}></span>
+          <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.hamburgerLineOpen : ''}`}></span>
+        </button>
+
+        <div className={`${styles.navContent} ${isMobileMenuOpen ? styles.navContentOpen : ''}`}>
+          <ul className={styles.navLinks}>
+            <li><Link href="/" onClick={closeMobileMenu}>Home</Link></li>
+            <li><Link href="/about" onClick={closeMobileMenu}>About</Link></li>
+            <li><Link href="/individual-coaching" onClick={closeMobileMenu}>Individual Coaching</Link></li>
+            <li><Link href="/group-coaching" onClick={closeMobileMenu}>Group Coaching</Link></li>
+            <li className={styles.dropdown} ref={moreRef}>
+              <a href="#" onClick={toggleMore} className={styles.dropdownToggle}>
+                More
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="currentColor"
+                  className={`${styles.dropdownArrow} ${isMoreOpen ? styles.dropdownArrowOpen : ''}`}
+                >
+                  <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="2" fill="none"/>
+                </svg>
+              </a>
+              {isMoreOpen && (
+                <ul className={styles.dropdownMenu}>
+                  <li><Link href="/speaking-events" onClick={closeMobileMenu}>Speaking Events</Link></li>
+                </ul>
+              )}
+            </li>
+          </ul>
+          <SearchBar />
+        </div>
       </div>
     </nav>
   );

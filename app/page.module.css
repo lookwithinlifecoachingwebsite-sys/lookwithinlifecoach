@@ -510,15 +510,18 @@
 
 @media (max-width: 768px) {
   .heroWrapper {
-    min-height: auto;
-    padding-top: 80px;
+    min-height: 100vh;
+    padding-top: 0;
   }
 
   .hero {
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 2rem 1.5rem;
-    min-height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .heroWrapperSubpage {
@@ -669,8 +672,16 @@
 }
 
 @media (max-width: 480px) {
+  .heroWrapper {
+    min-height: 100vh;
+  }
+
   .hero {
     padding: 1.5rem 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .heroSubpage {

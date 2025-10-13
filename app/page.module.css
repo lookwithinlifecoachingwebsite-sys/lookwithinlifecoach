@@ -545,16 +545,11 @@
   }
 
   .heroImage {
-    min-height: 400px;
-    order: -1;
+    display: none;
   }
 
   .mainImage {
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: 400px;
-    object-position: center;
+    display: none;
   }
 
   .ctaButton {
@@ -691,11 +686,11 @@
   }
 
   .heroImage {
-    min-height: 300px;
+    display: none;
   }
 
   .mainImage {
-    height: 300px;
+    display: none;
   }
 
   .ctaButton {

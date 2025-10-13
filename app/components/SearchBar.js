@@ -193,7 +193,7 @@ export default function SearchBar() {
       {isExpanded && query.trim().length >= 2 && results.length === 0 && (
         <div className={styles.searchResults}>
           <div className={styles.noResults}>
-            No results found for "{query}"
+            No results found for &quot;{query}&quot;
           </div>
         </div>
       )}

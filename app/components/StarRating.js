@@ -21,13 +21,14 @@ export default function StarRating() {
       { threshold: 0.5 }
     );
 
-    if (starRef.current) {
-      observer.observe(starRef.current);
+    const currentRef = starRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (starRef.current) {
-        observer.unobserve(starRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);

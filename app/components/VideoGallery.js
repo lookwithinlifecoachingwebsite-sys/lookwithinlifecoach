@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import styles from './VideoGallery.module.css';
 
 export default function VideoGallery() {
@@ -59,10 +60,13 @@ export default function VideoGallery() {
             onClick={() => setCurrentVideo(index)}
           >
             <div className={styles.thumbnailWrapper}>
-              <img
+              <Image
                 src={video.thumbnail}
                 alt={video.title}
                 className={styles.thumbnailImage}
+                width={320}
+                height={180}
+                unoptimized
               />
               {index === currentVideo && (
                 <div className={styles.playingIndicator}>

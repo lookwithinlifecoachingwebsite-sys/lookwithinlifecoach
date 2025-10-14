@@ -244,7 +244,7 @@
     bottom: 0;
     height: 100vh;
     background-color: #000;
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 6rem 1rem 2rem;
     gap: 2rem;
     transform: translateX(-100%);

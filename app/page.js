@@ -84,7 +84,7 @@ export default function Home() {
               1:1 personalized coaching focused on your unique goals.
               Perfect for a variety of life transitions and growth objectives.
             </p>
-            <button className={styles.learnMoreButton}>Learn more</button>
+            <a href="/individual-coaching" className={styles.learnMoreButton}>Learn more</a>
           </div>
 
           <div className={styles.serviceCard}>
@@ -103,7 +103,7 @@ export default function Home() {
               8 to 10 weeks group development program focused on specific topics,
               combining coaching and collaborative learning.
             </p>
-            <button className={styles.learnMoreButton}>Learn more</button>
+            <a href="/group-coaching" className={styles.learnMoreButton}>Learn more</a>
           </div>
         </div>
       </section>

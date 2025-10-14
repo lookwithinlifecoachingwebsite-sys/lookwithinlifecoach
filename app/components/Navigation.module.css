@@ -238,16 +238,17 @@
 
   .navContent {
     position: fixed;
-    top: 60px;
+    top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
+    height: 100vh;
     background-color: #000;
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: 6rem 1rem 2rem;
     gap: 2rem;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
-    max-height: calc(100vh - 60px);
     overflow-y: auto;
   }
 
@@ -277,17 +278,40 @@
     width: 100%;
   }
 
+  .dropdownToggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1.125rem;
+  }
+
   .dropdownMenu {
-    position: static;
+    position: relative;
+    left: 0;
     transform: none;
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
     box-shadow: none;
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     background-color: rgba(255, 255, 255, 0.05);
+    width: 100%;
+    border-radius: 8px;
+    padding: 0.5rem 0;
+  }
+
+  .dropdownMenu li {
+    border-bottom: none;
   }
 
   .dropdownMenu a {
     font-size: 1rem;
+    padding: 1rem 1.5rem;
+    text-align: center;
+  }
+
+  .dropdownMenu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
   }
 }
 

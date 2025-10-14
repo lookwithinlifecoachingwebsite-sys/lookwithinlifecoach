@@ -128,12 +128,18 @@
 
   .carouselTrack {
     width: 100%;
-    max-width: 400px;
+    max-width: 90%;
+    margin: 0 auto;
   }
 
   .testimonialCard {
-    max-width: 400px;
-    margin-left: -200px;
-    height: 450px;
+    max-width: 90%;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%) !important;
+    margin-left: 0;
+    height: auto;
+    min-height: 400px;
+    padding: 1.5rem;
   }
 }

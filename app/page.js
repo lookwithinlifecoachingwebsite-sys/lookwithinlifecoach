@@ -180,9 +180,17 @@ Do you want more from your Employee Assistance Program (EAP) counseling services
       <section id="podcast" className={styles.podcastSection}>
         <PodcastParticles />
         <div className={styles.podcastContainer}>
+          <h2 className={styles.sectionTitle}>Latest Podcast Episode</h2>
+          <p className={styles.sectionDescription}>
+            Listen to inspiring conversations and life coaching insights
+          </p>
           <div className={styles.podcastContent}>
-            <div className={styles.podcastPlaceholder}>
-              <span>Podcast Player/Embed</span>
+            <div className={styles.podcastPlayer}>
+              <audio controls className={styles.audioPlayer}>
+                <source src="/podcast/episode.mp3" type="audio/mpeg" />
+                <source src="/podcast/episode.ogg" type="audio/ogg" />
+                Your browser does not support the audio element.
+              </audio>
             </div>
           </div>
         </div>

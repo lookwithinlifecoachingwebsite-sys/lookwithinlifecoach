@@ -60,10 +60,7 @@ export default function Footer() {
             <li><Link href="/about">About</Link></li>
             <li><Link href="/individual-coaching">Individual Coaching</Link></li>
             <li><Link href="/group-coaching">Group Coaching</Link></li>
-            <li><Link href="/resources">Resources</Link></li>
-            <li><Link href="/testimonials">Testimonials</Link></li>
-            <li><Link href="/blog">Blog</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
+            <li><Link href="/speaking-events">Speaking Events</Link></li>
           </ul>
         </div>
 

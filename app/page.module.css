@@ -375,7 +375,33 @@
 }
 
 .podcastContent {
+  margin: 2rem auto 0 auto;
+  max-width: 800px;
+}
+
+.podcastEpisodeInfo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.episodeTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin: 0 0 0.75rem 0;
+}
+
+.episodeDescription {
+  font-size: 1.125rem;
+  color: #666;
+  margin: 0 0 1rem 0;
+}
+
+.episodeShow {
+  font-size: 0.95rem;
+  color: #999;
   margin: 0;
+  font-style: italic;
 }
 
 .podcastPlayer {
@@ -388,8 +414,6 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 .audioPlayer {
@@ -405,7 +429,7 @@
 
 .audioPlayer::-webkit-media-controls-play-button,
 .audioPlayer::-webkit-media-controls-pause-button {
-  background-color: var(--foreground);
+  background-color: #ffffff;
   border-radius: 50%;
 }
 

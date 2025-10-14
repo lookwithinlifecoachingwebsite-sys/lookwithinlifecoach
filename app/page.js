@@ -180,10 +180,7 @@ Do you want more from your Employee Assistance Program (EAP) counseling services
       <section id="podcast" className={styles.podcastSection}>
         <PodcastParticles />
         <div className={styles.podcastContainer}>
-          <h2 className={styles.sectionTitle}>Latest Podcast Episode</h2>
-          <p className={styles.sectionDescription}>
-            Listen to inspiring conversations and life coaching insights
-          </p>
+          <h2 className={styles.sectionTitle}>Podcast Episode</h2>
           <div className={styles.podcastContent}>
             <div className={styles.podcastEpisodeInfo}>
               <h3 className={styles.episodeTitle}>Ep #263 - Bouncing Back (in business) Stronger</h3>

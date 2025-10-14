@@ -185,10 +185,14 @@ Do you want more from your Employee Assistance Program (EAP) counseling services
             Listen to inspiring conversations and life coaching insights
           </p>
           <div className={styles.podcastContent}>
+            <div className={styles.podcastEpisodeInfo}>
+              <h3 className={styles.episodeTitle}>Ep #263 - Bouncing Back (in business) Stronger</h3>
+              <p className={styles.episodeDescription}>An Interview with Shelia Malcolm</p>
+              <p className={styles.episodeShow}>Brand and Grow Your Coaching Practice&apos;s Podcast</p>
+            </div>
             <div className={styles.podcastPlayer}>
               <audio controls className={styles.audioPlayer}>
                 <source src="/podcast/episode.mp3" type="audio/mpeg" />
-                <source src="/podcast/episode.ogg" type="audio/ogg" />
                 Your browser does not support the audio element.
               </audio>
             </div>

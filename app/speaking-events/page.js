@@ -1,5 +1,7 @@
+import Image from "next/image";
 import styles from "../page.module.css";
 import VideoGallery from "../components/VideoGallery";
+import SpeakingEventsPageImage from "../SpeakingEventsPage.png";
 import ChatIcon from "../components/ChatIcon";
 
 export const metadata = {
@@ -51,7 +53,12 @@ export default function SpeakingEvents() {
             </a>
           </div>
           <div className={styles.heroImage}>
-            {/* Placeholder for speaking events image */}
+            <Image
+              src={SpeakingEventsPageImage}
+              alt="Speaking Events & Workshops"
+              className={styles.subpageImage}
+              priority
+            />
           </div>
         </div>
       </section>

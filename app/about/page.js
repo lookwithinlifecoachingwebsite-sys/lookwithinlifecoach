@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "../page.module.css";
 import VideoTestimonialSlider from "../components/VideoTestimonialSlider";
 import ChatIcon from "../components/ChatIcon";
+import AboutImagePage from "../AboutImagePage.png";
 
 export const metadata = {
   title: "About Shelia Malcolm | Certified Life Coach | Look Within Life Coaching",
@@ -43,7 +44,12 @@ export default function About() {
             </a>
           </div>
           <div className={styles.heroImage}>
-            {/* Placeholder for about image */}
+            <Image
+              src={AboutImagePage}
+              alt="About Look Within Life Coaching"
+              className={styles.subpageImage}
+              priority
+            />
           </div>
         </div>
       </section>

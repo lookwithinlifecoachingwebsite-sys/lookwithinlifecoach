@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "../page.module.css";
 import GroupCoachingImage from "../GroupCoaching.png";
+import GroupCoachingPageImage from "../GroupCoachingPage.png";
 import ChatIcon from "../components/ChatIcon";
 
 export const metadata = {
@@ -52,7 +53,12 @@ export default function GroupCoaching() {
             </a>
           </div>
           <div className={styles.heroImage}>
-            {/* Image placeholder removed */}
+            <Image
+              src={GroupCoachingPageImage}
+              alt="Group Coaching Programs"
+              className={styles.subpageImage}
+              priority
+            />
           </div>
         </div>
       </section>

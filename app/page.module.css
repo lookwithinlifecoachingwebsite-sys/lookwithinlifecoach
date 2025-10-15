@@ -24,8 +24,10 @@
 /* Hero Section for Subpages (About, Individual Coaching, Group Coaching, Speaking Events) */
 .heroWrapperSubpage {
   background-color: #faedcd;
-  min-height: 50vh;
+  min-height: 70vh;
+  max-height: 70vh;
   width: 100%;
+  overflow: hidden;
 }
 
 .heroSubpage {
@@ -36,7 +38,8 @@
   margin: 0 auto;
   padding: 4rem 2rem;
   align-items: center;
-  min-height: 50vh;
+  min-height: 70vh;
+  max-height: 70vh;
 }
 
 .heroContent {
@@ -113,6 +116,16 @@
   position: absolute;
   top: -150px;
   right: 0;
+}
+
+.subpageImage {
+  width: 120%;
+  height: 120%;
+  max-height: 600px;
+  object-fit: contain;
+  object-position: center bottom;
+  position: relative;
+  top: 20px;
 }
 
 /* Rating Section */

@@ -29,10 +29,21 @@ export default function CookieBanner({ onOpenCookiePolicy }) {
     setIsVisible(false);
   };
 
+  const handleClose = () => {
+    setIsVisible(false);
+    // Don't set any consent preference when just closing
+  };
+
   if (!isVisible) return null;
 
   return (
     <div className={styles.cookieBanner}>
+      <button className={styles.closeButton} onClick={handleClose} aria-label="Close cookie banner">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
+          <line x1="5" y1="5" x2="15" y2="15"></line>
+          <line x1="15" y1="5" x2="5" y2="15"></line>
+        </svg>
+      </button>
       <div className={styles.cookieContent}>
         <div className={styles.cookieText}>
           <p>

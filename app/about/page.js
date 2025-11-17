@@ -63,7 +63,6 @@ export default function About() {
           </p>
           <div className={styles.coachingGrid}>
             <div id="about-organization" className={styles.coachingItem}>
-              <h3 className={styles.coachingItemTitle}>Our Organization</h3>
               <p className={styles.coachingItemDescription}>
                 Look Within Life Coaching LLC is an organization dedicated to being a growth catalyst
                 to individuals, businesses and non-profit organizations. Our team helps clients to create

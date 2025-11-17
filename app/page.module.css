@@ -548,6 +548,35 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .mainImage {
+    top: -100px;
+    height: auto;
+    max-height: 1400px;
+    object-position: top center;
+  }
+
+  .heroImage {
+    min-height: 600px;
+    overflow: hidden;
+  }
+
+  .heroWrapper {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 1025px) {
+  .mainImage {
+    top: -80px;
+    max-height: 1300px;
+  }
+
+  .heroImage {
+    min-height: 580px;
+  }
+}
+
 @media (max-width: 1024px) {
   .hero {
     gap: 3rem;
@@ -557,6 +586,16 @@
   .heroSubpage {
     gap: 3rem;
     padding: 3rem 1.5rem;
+  }
+
+  .mainImage {
+    top: -80px;
+    height: auto;
+    max-height: 1200px;
+  }
+
+  .heroImage {
+    min-height: 550px;
   }
 
   .servicesContainer {

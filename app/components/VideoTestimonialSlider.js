@@ -8,22 +8,29 @@ export default function VideoTestimonialSlider() {
 
   const testimonials = [
     {
-      videoId: 'VIDEO_ID_1',
-      clientName: 'Client Name 1',
+      type: 'facebook',
+      videoUrl: 'https://www.facebook.com/lookwithinlifecoaching/videos/941007392613458',
+      clientName: 'Client Testimonial',
     },
     {
-      videoId: 'VIDEO_ID_2',
-      clientName: 'Client Name 2',
+      type: 'facebook',
+      videoUrl: 'https://www.facebook.com/lookwithinlifecoaching/videos/954140467966817/',
+      clientName: 'Client Testimonial',
     },
     {
-      videoId: 'VIDEO_ID_3',
-      clientName: 'Client Name 3',
-    },
-    {
-      videoId: 'VIDEO_ID_4',
-      clientName: 'Client Name 4',
+      type: 'youtube',
+      videoId: 'eIlNQSroMd4',
+      clientName: 'Client Testimonial',
     },
   ];
+
+  const getVideoSrc = (testimonial) => {
+    if (testimonial.type === 'facebook') {
+      return `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(testimonial.videoUrl)}&show_text=false&width=500&height=281`;
+    } else {
+      return `https://www.youtube.com/embed/${testimonial.videoId}`;
+    }
+  };
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % testimonials.length);
@@ -43,11 +50,12 @@ export default function VideoTestimonialSlider() {
         <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '12px' }}>
           <iframe
             style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-            src={`https://www.youtube.com/embed/${testimonials[currentSlide].videoId}`}
+            src={getVideoSrc(testimonials[currentSlide])}
             title={`Client Testimonial ${currentSlide + 1}`}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            scrolling="no"
           ></iframe>
         </div>
         <h3 className={styles.clientName}>{testimonials[currentSlide].clientName}</h3>

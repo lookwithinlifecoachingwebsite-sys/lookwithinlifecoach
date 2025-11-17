@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import SearchBar from './SearchBar';
 import styles from './Navigation.module.css';
 
@@ -109,7 +110,16 @@ export default function Navigation() {
       <div className={styles.glow} ref={glowRef}></div>
       <div className={styles.container}>
         <div className={styles.logo}>
-          <Link href="/" onClick={closeMobileMenu}>Look Within</Link>
+          <Link href="/" onClick={closeMobileMenu}>
+            <Image 
+              src="/Logo.jpeg" 
+              alt="Look Within Life Coaching" 
+              width={150} 
+              height={50}
+              className={styles.logoImage}
+              priority
+            />
+          </Link>
         </div>
 
         {/* Hamburger Menu Button */}
@@ -149,7 +159,18 @@ export default function Navigation() {
               )}
             </li>
           </ul>
-          <SearchBar />
+          <div className={styles.navActions}>
+            <SearchBar />
+            <a 
+              href="https://www.coachaccountable.com/login" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={styles.loginButton}
+              onClick={closeMobileMenu}
+            >
+              Login
+            </a>
+          </div>
         </div>
       </div>
     </nav>

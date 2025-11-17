@@ -16,6 +16,13 @@ export const metadata = {
   authors: [{ name: "Look Within Life Coaching LLC" }],
   creator: "Look Within Life Coaching LLC",
   publisher: "Look Within Life Coaching LLC",
+  icons: {
+    icon: [
+      { url: '/favicon.ico', type: 'image/x-icon' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
   robots: {
     index: true,
     follow: true,
@@ -117,6 +124,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico?v=4" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico?v=4" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/favicon.ico?v=4" />
+        <meta name="theme-color" content="#000000" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

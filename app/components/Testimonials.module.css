@@ -70,6 +70,14 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
+.testimonialCard.clickable {
+  cursor: pointer;
+}
+
+.testimonialCard.clickable.active:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
 .testimonialCard.hidden {
   pointer-events: none;
 }
@@ -85,6 +93,12 @@
   color: #666;
   margin: 0;
   font-style: italic;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
 }
 
 .testimonialAuthor {
@@ -106,6 +120,36 @@
   font-size: 0.9rem;
   color: #999;
   margin: 0;
+}
+
+.readMoreHint {
+  font-size: 0.875rem;
+  color: #999;
+  text-align: center;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.modalTestimonial {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.modalQuote {
+  display: flex;
+  align-items: center;
+}
+
+.modalText {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #666;
+  margin: 0;
+  font-style: italic;
+  white-space: pre-wrap;
 }
 
 /* Responsive Design */

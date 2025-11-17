@@ -82,8 +82,8 @@ export default function SpeakingEvents() {
         </div>
       </section>
 
-      {/* Videos Section */}
-      <section id="videos" className={styles.additionalCoaching}>
+      {/* Videos Section - Commented out for future use */}
+      {/* <section id="videos" className={styles.additionalCoaching}>
         <div className={styles.additionalCoachingContainer}>
           <h2 className={styles.sectionTitle}>Watch Shelia in Action</h2>
           <p className={styles.sectionDescription}>
@@ -91,7 +91,7 @@ export default function SpeakingEvents() {
           </p>
           <VideoGallery />
         </div>
-      </section>
+      </section> */}
 
       {/* Booking Information Section */}
       <section id="booking" className={styles.helpYouSection}>

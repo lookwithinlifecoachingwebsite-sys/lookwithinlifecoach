@@ -43,15 +43,21 @@
 }
 
 .logo a {
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: 600;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .logo a:hover {
-  color: #ddd;
+  opacity: 0.8;
+}
+
+.logoImage {
+  height: auto;
+  width: auto;
+  max-height: 50px;
+  object-fit: contain;
 }
 
 .navLinks {
@@ -207,6 +213,30 @@
   justify-content: space-between;
 }
 
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.loginButton {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.loginButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+
 /* Responsive design */
 @media (max-width: 1024px) {
   .container {
@@ -232,8 +262,8 @@
     display: flex;
   }
 
-  .logo a {
-    font-size: 1.25rem;
+  .logoImage {
+    max-height: 40px;
   }
 
   .navContent {
@@ -250,6 +280,19 @@
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     overflow-y: auto;
+  }
+
+  .navActions {
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .loginButton {
+    width: 100%;
+    text-align: center;
+    padding: 0.875rem 1.5rem;
+    font-size: 1.125rem;
   }
 
   .navContentOpen {
@@ -320,8 +363,8 @@
     padding: 0.75rem;
   }
 
-  .logo a {
-    font-size: 1.125rem;
+  .logoImage {
+    max-height: 35px;
   }
 
   .hamburger {
@@ -336,5 +379,10 @@
   .navLinks a {
     font-size: 1rem;
     padding: 0.625rem;
+  }
+
+  .loginButton {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
   }
 }

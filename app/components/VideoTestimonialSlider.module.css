@@ -1,0 +1,118 @@
+.sliderContainer {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.videoWrapper {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+}
+
+.clientName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin: 1.5rem 0 0 0;
+  text-align: center;
+}
+
+/* Navigation Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--foreground);
+  color: #ffffff;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  line-height: 1;
+}
+
+.arrow:hover {
+  background: #555;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrowLeft {
+  left: 0;
+}
+
+.arrowRight {
+  right: 0;
+}
+
+/* Dots Navigation */
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #d1d1d1;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot:hover {
+  background: #999;
+}
+
+.dotActive {
+  background: var(--foreground);
+  width: 14px;
+  height: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sliderContainer {
+    padding: 0 2.5rem;
+  }
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .videoWrapper {
+    padding: 1.5rem;
+  }
+
+  .clientName {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sliderContainer {
+    padding: 0 2rem;
+  }
+
+  .arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 1.25rem;
+  }
+}

@@ -70,9 +70,6 @@ export default function Footer() {
           <ul className={styles.footerLinks}>
             <li><Link href="/individual-coaching">Individual Coaching</Link></li>
             <li><Link href="/group-coaching">Group Coaching</Link></li>
-            <li><Link href="/leadership">Leadership Development</Link></li>
-            <li><Link href="/career-transition">Career Transition</Link></li>
-            <li><Link href="/work-life-balance">Work-Life Balance</Link></li>
           </ul>
         </div>
 

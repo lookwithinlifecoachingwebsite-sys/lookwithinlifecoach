@@ -58,9 +58,6 @@ export default function About() {
       <section id="about" className={styles.additionalCoaching}>
         <div className={styles.additionalCoachingContainer}>
           <h2 className={styles.sectionTitle}>About Us</h2>
-          <p className={styles.sectionDescription}>
-            Certified John Maxwell Transformational Life Coach
-          </p>
           <div className={styles.coachingGrid}>
             <div id="about-organization" className={styles.coachingItem}>
               <p className={styles.coachingItemDescription}>
